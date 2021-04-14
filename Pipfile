@@ -9,6 +9,7 @@ google-cloud-bigquery = "*"
 pandas = "*"
 pandas-gbq = "*"
 gsheetsdb = "*"
+s3fs = "*"
 
 [dev-packages]
 
