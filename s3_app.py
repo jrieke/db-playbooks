@@ -3,8 +3,6 @@ import s3fs
 import time
 import os
 
-st.write(os.environ["aws_access_key_id"][:5])
-
 start_time = time.time()
 
 # Create connection object.
