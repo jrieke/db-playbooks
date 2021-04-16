@@ -10,6 +10,8 @@ pandas = "*"
 pandas-gbq = "*"
 gsheetsdb = "*"
 s3fs = "*"
+psycopg2-binary = "*"
+pymongo = "*"
 
 [dev-packages]
 
