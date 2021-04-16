@@ -2,12 +2,7 @@ import streamlit as st
 import pymongo
 
 # Initialize connection.
-client = pymongo.MongoClient(
-    st.secrets["mongo"]["url"],
-    st.secrets["mongo"]["port"],
-    username=st.secrets["mongo"]["username"],
-    password=st.secrets["mongo"]["password"],
-)
+client = pymongo.MongoClient(**st.secrets["mongo"])
 db = client.mydb
 
 # Perform query.

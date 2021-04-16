@@ -3,10 +3,8 @@ import psycopg2
 import time
 
 start_time = time.time()
-# Initialize connection. 
-conn = psycopg2.connect(
-    "dbname={dbname} user={user} password={password}".format(**st.secrets["postgres"])
-)
+# Initialize connection.
+conn = psycopg2.connect(**st.secrets["postgres"])
 cur = conn.cursor()
 f"Initiating connection took {time.time() - start_time} s"
 
