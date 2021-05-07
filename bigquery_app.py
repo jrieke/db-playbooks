@@ -19,7 +19,7 @@ import pandas as pd
 # bigquery_key_json = json.loads(st.secrets["bigquery_key"], strict=False)
 # credentials = service_account.Credentials.from_service_account_info(bigquery_key_json)
 credentials = service_account.Credentials.from_service_account_info(
-    st.secrets["bigquery_key"]
+    st.secrets["gcp_service_account"]
 )
 
 # # Create API client.
