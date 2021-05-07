@@ -13,6 +13,7 @@ s3fs = "*"
 psycopg2-binary = "*"
 pymongo = "*"
 tableauserverclient = "*"
+gspread = "*"
 
 [dev-packages]
 
