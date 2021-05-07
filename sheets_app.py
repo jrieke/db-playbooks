@@ -10,9 +10,18 @@ conn = connect()
 f"Conn took {time.time() - start_time} s"
 
 # Perform SQL query on the Google Sheet.
-sheet_url = st.secrets["gsheets_url"]
 start_time_query = time.time()
-rows = conn.execute(f'SELECT * FROM "{sheet_url}"', headers=1)
+
+
+@st.cache(ttl=600)
+def run_query(query):
+    rows = conn.execute(query, headers=1)
+    return rows
+
+
+sheet_url = st.secrets["gsheets_url"]
+rows = run_query(f'SELECT * FROM "{sheet_url}"')
+print(type(rows))
 f"Query took {time.time() - start_time_query} s"
 
 # Print results.

@@ -12,6 +12,7 @@ gsheetsdb = "*"
 s3fs = "*"
 psycopg2-binary = "*"
 pymongo = "*"
+tableauserverclient = "*"
 
 [dev-packages]
 
